@@ -40,6 +40,12 @@ RSpec.describe PostsController, type: :controller do
     end
     #en este it se ejecuta el :each 
     it { expect(response).to have_http_status 200 }
+
+    it "add post" do
+      expect{
+        post :create, { post: post_one }
+      }.to change(Post,:count).by(1)
+    end
   end
 
 end

@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
-	validates :title, presence: true, uniqueness: true
-	validates :description, presence: true, length: { minimum: 20 }
+  validates :title, presence: true
+  validates :description, presence: true, length: { minimum: 20 }
+  has_many :comments
 end
