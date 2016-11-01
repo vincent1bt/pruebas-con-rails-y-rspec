@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :comment do
     email "vincent@hotmail.com"
-	body "muy buen post!"
-	association :post, factory: :post
+	  body "muy buen post!"
+	  association :post, factory: :post
   end
 end
